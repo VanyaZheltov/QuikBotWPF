@@ -12,11 +12,25 @@
     </Window.DataContext>
     <Grid>
         <TextBox 
-            Height="20" Width="55" 
+            Height="23" Width="55" 
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="20" Text="{Binding ConnectIP, Mode=OneWay}"/>
-        <Label Name="StatusLabel" Height="20" Width="220" 
+        <Label FontSize="10" Name="StatusLabel" Height="23" Width="220" 
                VerticalAlignment="Top" HorizontalAlignment="Center" 
-               Margin="95,20,477,0" Content="{Binding ConnectStatus, StringFormat=Статус: {0}}"/>
+               Margin="95,20,477,0" BorderBrush="LightGray" VerticalContentAlignment="Top" BorderThickness="1" Content="{Binding ConnectStatus, StringFormat=Статус: {0}}"/>
+        <Button Margin="320,20,10,376" Content="Connect" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <TextBox 
+            Height="23" Width="55" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="20,50" Text="{Binding SecCode}"/>
+        <Button Height="30" Margin="20,70,12,290" Content="Run" FontWeight="Bold" FontFamily="Comic Sans MS"></Button>
+
+        <TextBox Height="25" Width="120" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,120,0,0" IsEnabled="False" Text="{Binding ClientCode}"/>
+        <Label Content="Client Code" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" FontSize="12" Width="75" Margin="20,120,0,0"/>
+
+        <TextBox Height="25" Width="120" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,140,0,0" IsEnabled="False" Text="{Binding LastPrice}"/>
+        <Label Content="Last Price" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" FontSize="12" Width="75" Margin="20,140,0,0"/>
+
+
     </Grid>
 </Window>
