@@ -40,7 +40,34 @@ namespace WPFTestApp.ViewModels
 
         #endregion
 
-        public  MainWindowViewModel()
+        #region SecCode : String - Код Акции
+
+        private string _SecCode;
+
+        public string SecCode { get => _SecCode; set => Set(ref _SecCode, value); }
+
+
+        #endregion
+
+        #region ClientCode : String - Код Клиента
+
+        private string _ClientCode;
+
+        public string ClientCode { get => _ClientCode; set => Set(ref _ClientCode, value); }
+
+
+        #endregion
+
+        #region LastPrice : String - Последняя цена
+
+        private string _LastPrice;
+
+        public string LastPrice { get => _LastPrice; set => Set(ref _LastPrice, value); }
+
+
+        #endregion
+
+        public MainWindowViewModel()
         {
             _QuikSharp.ConnectNotify += ConnectMessage;
             _QuikSharp.LastPriceNotify += LastPrice;

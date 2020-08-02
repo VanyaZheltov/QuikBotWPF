@@ -12,11 +12,11 @@
     </Window.DataContext>
     <Grid>
         <TextBox 
-            Height="20" Width="55" 
+            Height="23" Width="55" 
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="20" Text="{Binding ConnectIP, Mode=OneWay}"/>
-        <Label Name="StatusLabel" Height="74" Width="220" 
+        <Label Name="StatusLabel" Height="20" Width="220" 
                VerticalAlignment="Top" HorizontalAlignment="Center" 
-               Margin="100,104,472,0" Content="{Binding ConnectStatus, StringFormat=Статус: {0}}"/>
+               Margin="95,20,477,0" Content="{Binding ConnectStatus, StringFormat=Статус: {0}}"/>
     </Grid>
 </Window>
