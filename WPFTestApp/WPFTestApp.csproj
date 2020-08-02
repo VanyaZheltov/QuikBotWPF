@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="QUIKSharp">
-      <HintPath>..\..\..\..\OneDrive\Рабочий стол\321\QUIKSharp-master\src\QuikSharp\bin\Debug\net461\QUIKSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\OneDrive\Рабочий стол\QUIKSharp-master\src\QuikSharp\bin\Debug\net461\QUIKSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="QuikSharp\QuikSharp.cs" />
     <Compile Include="QuikSharp\Tool.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -23,5 +23,13 @@ namespace WPFTestApp.ViewModels
             OnPropertyChanged(PropertyName);
             return true;
         }
+
+
+
+
+
+
+
+        
     }
 }
