@@ -42,14 +42,14 @@ namespace WPFTestApp.ViewModels
 
         public  MainWindowViewModel()
         {
-
+            _QuikSharp.ConnectNotify += ConnectMessage;
             _QuikSharp.ConnectIp = ConnectIP;
             _QuikSharp.ConnectQuik();
-            _QuikSharp.ConnectNotify += ConnectMessage;
+           
         }
-        private void  ConnectMessage(string message)
+        private void  ConnectMessage()
         {
-            ConnectStatus = message;
+            ConnectStatus = _QuikSharp.ConnectStatus;
         }
     }
 }
