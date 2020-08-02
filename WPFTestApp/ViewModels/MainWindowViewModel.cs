@@ -13,7 +13,23 @@ namespace WPFTestApp.ViewModels
 
         private string _ConnectIp = "127.0.0.1";
 
-        public string ConnectIP { get => _ConnectIp; }
+        public string ConnectIP 
+        { 
+            get => _ConnectIp; 
+            set => Set(ref _ConnectIp, value); 
+        }
+
+        #endregion
+
+        #region ConnectStatus : String - статус подключения
+
+        private string _ConnectStatus;
+
+        public string ConnectStatus
+        {
+            get => _ConnectStatus;
+            set => Set(ref _ConnectStatus, value);
+        }
 
         #endregion
 
