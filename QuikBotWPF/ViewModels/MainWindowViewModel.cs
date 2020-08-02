@@ -11,7 +11,7 @@ namespace QuikBotWPF.ViewModels
     {
         #region Title
 
-        private string _Title = "Quik Bot";
+        private string _Title = "Quik Bot2236";
 
         public string Title
         {
