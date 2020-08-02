@@ -5,10 +5,17 @@ using System.Text;
 using QuikSharp;
 using System.Threading.Tasks;
 
+using WPFTestApp.QuikSharp;
+
 namespace WPFTestApp.ViewModels
 {
     class MainWindowViewModel : ViewModel
     {
+        QuikSharpConnect _QuikSharp = new QuikSharpConnect();
+       
+        
+
+
         #region ConnectIP : String - ip
 
         private string _ConnectIp = "127.0.0.1";
@@ -33,10 +40,14 @@ namespace WPFTestApp.ViewModels
 
         #endregion
 
-
-        private static void  ConnectMessage(string message)
+        public  MainWindowViewModel()
         {
-            
+            _QuikSharp.ConnectIp = ConnectIP;
+            _QuikSharp.ConnectNotify += ConnectMessage;
+        }
+        private void  ConnectMessage(string message)
+        {
+            ConnectStatus = message;
         }
     }
 }

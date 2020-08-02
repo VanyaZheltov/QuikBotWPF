@@ -10,7 +10,7 @@ using QuikSharp.DataStructures.Transaction;
 
 namespace WPFTestApp.QuikSharp
 {
-    public class QuikSharp
+    public class QuikSharpConnect
     {/// <summary>
     /// статус
     /// </summary>
