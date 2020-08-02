@@ -10,57 +10,54 @@ using QuikSharp.DataStructures.Transaction;
 
 namespace WPFTestApp.QuikSharp
 {
-    class QuikSharp
-    {
+    public class QuikSharp
+    {/// <summary>
+    /// статус
+    /// </summary>
+    /// <param name="message"></param>
+        public delegate void ConnectHandler(string message);
+        public event ConnectHandler ConnectNotify;
+
         public static Quik _quik;
+        bool isServerConnected = false;
+        private string _ConnectIp = "127.0.0.1";
+        public string ConnectIp { get => _ConnectIp; set => _ConnectIp = value; }
 
         public void ConnectQuik()
         {
             try
             {
-                textBoxLogsWindow.AppendText("Подключаемся к терминалу Quik..." + Environment.NewLine);
-                _quik = new Quik(Quik.DefaultPort, new InMemoryStorage(), textBoxHost.Text);    // инициализируем объект Quik с использованием удаленного IP-адреса терминала
-                
-                //// Отладочный вариант подключения
-                //if (checkBoxRemoteHost.Checked) _quik = new Quik(34136, new InMemoryStorage(), textBoxHost.Text);    // инициализируем объект Quik с использованием удаленного IP-адреса терминала
-                //else _quik = new Quik(34136, new InMemoryStorage());    // инициализируем объект Quik с использованием локального расположения терминала (по умолчанию)
+                _quik = new Quik(Quik.DefaultPort, new InMemoryStorage(), ConnectIp);    // инициализируем объект Quik с использованием удаленного IP-адреса терминала
+                ConnectNotify?.Invoke($"Подключаемся к терминалу Quik...");
             }
             catch
             {
-                textBoxLogsWindow.AppendText("Ошибка инициализации объекта Quik..." + Environment.NewLine);
+                ConnectNotify?.Invoke($"Подключаемся к терминалу Quik...");
             }
 
             if (_quik != null)
             {
-                textBoxLogsWindow.AppendText("Экземпляр Quik создан." + Environment.NewLine);
+                ConnectNotify?.Invoke("Экземпляр Quik создан.");
                 try
                 {
-                    textBoxLogsWindow.AppendText("Получаем статус соединения с сервером...." + Environment.NewLine);
+                    ConnectNotify?.Invoke("Получаем статус соединения с сервером....");
                     isServerConnected = _quik.Service.IsConnected().Result;
                     if (isServerConnected)
                     {
-                        textBoxLogsWindow.AppendText("Соединение с сервером установлено." + Environment.NewLine);
-                        buttonRun.Enabled = true;
-                        buttonStart.Enabled = false;
+                        ConnectNotify?.Invoke("Соединение с сервером установлено.");
+
                     }
                     else
                     {
-                        textBoxLogsWindow.AppendText("Соединение с сервером НЕ установлено." + Environment.NewLine);
-                        buttonRun.Enabled = false;
-                        buttonStart.Enabled = true;
+                        ConnectNotify?.Invoke("Соединение с сервером НЕ установлено.");
                     }
-                    // временный код
-                    Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-                    Trace.Listeners.Add(new TextWriterTraceListener(Application.StartupPath + "\\TraceLogging.log"));
-                    // временный код
                 }
                 catch
                 {
-                    textBoxLogsWindow.AppendText("Неудачная попытка получить статус соединения с сервером." + Environment.NewLine);
+                    ConnectNotify?.Invoke("Неудачная попытка получить статус соединения с сервером.");
                 }
             }
-
-
-
+        }
     }
 }
+

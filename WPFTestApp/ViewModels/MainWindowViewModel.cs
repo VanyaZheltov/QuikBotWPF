@@ -18,6 +18,9 @@ namespace WPFTestApp.ViewModels
         #endregion
 
 
-
+        private static void  ConnectMessage(string message)
+        {
+            
+        }
     }
 }
