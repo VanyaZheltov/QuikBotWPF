@@ -43,9 +43,15 @@ namespace WPFTestApp.ViewModels
         public  MainWindowViewModel()
         {
             _QuikSharp.ConnectNotify += ConnectMessage;
+            _QuikSharp.LastPriceNotify += LastPrice;
             _QuikSharp.ConnectIp = ConnectIP;
             _QuikSharp.ConnectQuik();
+            _QuikSharp.RunQuik();
            
+        }
+        private void LastPrice()
+        {
+            ConnectStatus = _QuikSharp.ConnectStatus;
         }
         private void  ConnectMessage()
         {

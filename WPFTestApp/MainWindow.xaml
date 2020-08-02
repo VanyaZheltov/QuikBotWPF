@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTestApp"
         mc:Ignorable="d"
-        xmlns:vm="clr-namespace:WPFTestApp.ViewModels"
+        xmlns:vm1="clr-namespace:WPFTestApp.ViewModels"
         Title="TestWPFApp" Height="450" Width="800">
     <Window.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm1:MainWindowViewModel />
     </Window.DataContext>
     <Grid>
         <TextBox 
             Height="20" Width="55" 
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="20" Text="{Binding ConnectIP, Mode=OneWay}"/>
-        <Label Name="StatusLabel" Height="20" Width="220" 
+        <Label Name="StatusLabel" Height="74" Width="220" 
                VerticalAlignment="Top" HorizontalAlignment="Center" 
-               Margin="95,20,477,0" Content="{Binding ConnectStatus, StringFormat=Статус: {0}}"/>
+               Margin="100,104,472,0" Content="{Binding ConnectStatus, StringFormat=Статус: {0}}"/>
     </Grid>
 </Window>
