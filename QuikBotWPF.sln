@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuikBotWPF", "QuikBotWPF\QuikBotWPF.csproj", "{0FD9C158-7637-45D7-9C8A-36D2F8453837}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6ACC610B-B988-4714-9A0B-A54DA3D5CC50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{A7132B85-2B76-421E-9972-A0D37D9B472D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTestApp", "WPFTestApp\WPFTestApp.csproj", "{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,37 @@ Global
 		{0FD9C158-7637-45D7-9C8A-36D2F8453837}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0FD9C158-7637-45D7-9C8A-36D2F8453837}.Release|x86.ActiveCfg = Release|Any CPU
 		{0FD9C158-7637-45D7-9C8A-36D2F8453837}.Release|x86.Build.0 = Release|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Debug|x86.Build.0 = Debug|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7132B85-2B76-421E-9972-A0D37D9B472D}.Release|x86.Build.0 = Release|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Debug|x86.Build.0 = Debug|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7132B85-2B76-421E-9972-A0D37D9B472D} = {6ACC610B-B988-4714-9A0B-A54DA3D5CC50}
+		{DFD277BD-AAA9-4EC8-A4EE-7A26AD24C7EF} = {6ACC610B-B988-4714-9A0B-A54DA3D5CC50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95525C36-613E-4C7E-87F3-93BDDD76361D}
